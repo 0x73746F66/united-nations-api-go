@@ -1,0 +1,9 @@
+go:
+  container_name: go_app
+  image: golang:latest
+  working_dir: /go/src/app
+  command: go run main.go
+  volumes:
+    - ./:/go/src/app
+  ports:
+    - "51000:80"
